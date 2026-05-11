@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #050505;
+  color: #ffffff;
+}
+
+#app {
+  min-height: 100vh;
+  padding: 25px;
+  background:
+    radial-gradient(circle at center, rgba(130, 0, 255, 0.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(50, 0, 130, 0.35), transparent 35%),
+    #050505;
+}
+
+.top-panel {
+  max-width: 950px;
+  margin: 0 auto 15px;
+  text-align: right;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+  border: 1px solid #d000ff;
+  border-radius: 5px;
+  background: #0c0c0c;
+  color: #ff32ff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #d000ff;
+  color: white;
+  box-shadow: 0 0 15px #d000ff;
+}
+
+.resume {
+  max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: rgba(0, 0, 0, 0.92);
+  border: 1px solid #8b00ff;
+  box-shadow: 0 0 25px rgba(180, 0, 255, 0.55);
+}
+
+.left {
+  padding: 25px;
+  background: #111111;
+  color: white;
+  border-right: 1px solid #8b00ff;
+}
+
+.mini-btn {
+  margin: 5px 4px 0 0;
+  padding: 6px 9px;
+  font-size: 12px;
+}
+
+#photoInput {
+  width: 100%;
+  margin: 0 0 8px;
+  color: #d7d7d7;
+  font-size: 12px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.right {
+  padding: 30px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.9)),
+    radial-gradient(circle at center, rgba(127, 0, 255, 0.45), transparent 45%);
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4500ff, #d000ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #d000ff;
+  box-shadow: 0 0 25px rgba(208, 0, 255, 0.8);
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px #9d00ff;
+}
+
+.profession {
+  margin-top: 8px;
+  color: #ff32ff;
+  font-weight: bold;
+  text-shadow: 0 0 8px #9d00ff;
+}
+
+h2 {
+  margin-top: 0;
+  padding-bottom: 6px;
+  font-size: 18px;
+  color: #ff32ff;
+  text-transform: uppercase;
+  border-bottom: 1px solid #8b00ff;
+  text-shadow: 0 0 8px #8b00ff;
+}
+
+.left h2 {
+  color: #ff32ff;
+  border-bottom-color: #8b00ff;
+}
+
+.block {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 23px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.info {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid rgba(139, 0, 255, 0.45);
+  border-radius: 8px;
+  background: rgba(20, 20, 20, 0.8);
+}
+
+.info:hover,
+.block:hover {
+  background: rgba(110, 0, 180, 0.18);
+  box-shadow: 0 0 12px rgba(180, 0, 255, 0.35);
+}
+
+h3 {
+  margin: 0;
+  color: white;
+}
+
+.small {
+  margin: 3px 0;
+  color: #b46cff;
+  font-weight: bold;
+}
+
+.verysmall {
+  margin: 2px 0;
+  color: #b46cff;
+  font-weight: 600;
+}
+
+.left .small {
+  color: #b46cff;
+}
+
+p,
+li {
+  font-size: 15px;
+  color: #d7d7d7;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.skills span {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 3px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  background: #180027;
+  color: #ffffff;
+  border: 1px solid #8b00ff;
+  box-shadow: 0 0 8px rgba(139, 0, 255, 0.5);
+}
+
+[contenteditable="true"] {
+  outline: none;
+  border-radius: 4px;
+}
+
+[contenteditable="true"]:hover {
+  background: rgba(180, 0, 255, 0.12);
+}
+
+[contenteditable="true"]:focus {
+  background: rgba(180, 0, 255, 0.22);
+  box-shadow: 0 0 0 2px rgba(208, 0, 255, 0.45);
+}
+
+.changed {
+  animation: blink 0.4s;
+}
+
+@keyframes blink {
+  from {
+    background: rgba(208, 0, 255, 0.45);
+  }
+
+  to {
+    background: transparent;
+  }
+}
+
+/* Material Wave */
+
+.wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 0, 255, 0.45);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  #app {
+    padding: 15px;
+  }
+
+  .resume {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    border-right: 0;
+    border-bottom: 1px solid #8b00ff;
+  }
+
+  .top-panel {
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  #app {
+    padding: 0;
+    background: white;
+  }
+
+  .top-panel {
+    display: none;
+  }
+
+  .resume {
+    box-shadow: none;
+    border: none;
+  }
+}
