@@ -1,0 +1,20 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+backend/db.sqlite3
+backend/media/
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# System
+.DS_Store
+.vscode/
+.idea/
